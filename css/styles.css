@@ -284,6 +284,9 @@ img { max-width: 100%; display: block; }
   gap: 12px;
 }
 
+/* Small avatar beside the greeting (mobile only) */
+.hero-avatar { display: none; }
+
 /* Role line under the headline */
 .hero-role {
   display: flex;
@@ -1963,90 +1966,79 @@ footer {
 
 @media (max-width: 767px) {
   /*
-    Mobile hero: the photo drops behind the text as a faded
-    background instead of stacking underneath it.
+    Mobile hero: round avatar by the greeting (no photo behind the text),
+    calmer particles, stats in one band, tech stack in one row.
   */
   .hero { padding: 115px 0 70px; }
 
-  .hero-grid {
-    display: block;
-    position: relative;
-  }
-
-  .hero-text {
-    position: relative;
-    z-index: 2;
-  }
-
-  .hero h1,
-  .hero-copy { text-shadow: 0 1px 14px rgba(245,249,250,.9); }
+  .hero-grid { display: block; }
 
   .hero h1,
   .section-title,
   .contact-title { font-size: clamp(2.4rem, 11vw, 3.2rem); }
 
-  .hero-visual {
-    position: absolute;
-    top: -40px;
-    right: -15px;
-    width: 86%;
-    height: 470px;
-    margin: 0;
-    padding: 0;
-    z-index: 0;
-    pointer-events: none;
+  .hero-visual { display: none; }
+
+  .hero-kicker {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+
+  .hero-avatar {
     display: block;
+    width: 64px;
+    height: 64px;
+    flex: none;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: 50% 12%;
+    background: linear-gradient(165deg, #c9e3ea, #e6f2f5);
+    border: 3px solid #fff;
+    box-shadow: 0 0 0 2px #0f7c76, 0 10px 24px rgba(15,60,70,.18);
   }
 
-  .hero-visual.fade-up.reveal { transform: none; }
-
-  .photo-stack {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    aspect-ratio: auto;
-    -webkit-mask-image:
-      radial-gradient(ellipse 68% 60% at 60% 42%, black 35%, transparent 78%);
-            mask-image:
-      radial-gradient(ellipse 68% 60% at 60% 42%, black 35%, transparent 78%);
+  /* particles: fainter, kept to the top and bottom edges */
+  .hero-particles {
+    opacity: .7;
+    -webkit-mask-image: linear-gradient(to bottom, #000 0, rgba(0,0,0,.15) 22%, rgba(0,0,0,.15) 78%, #000 100%);
+            mask-image: linear-gradient(to bottom, #000 0, rgba(0,0,0,.15) 22%, rgba(0,0,0,.15) 78%, #000 100%);
   }
 
-  .photo-back,
-  .signature,
-  .signature-flourish { display: none; }
-
-  .photo-card {
-    transform: none;
-    border: 0;
-    border-radius: 0;
-    box-shadow: none;
-    background: transparent;
-  }
-
-  .portrait-photo {
-    inset: 0;
-    height: 100%;
-    object-position: 50% 10%;
-    opacity: .2;
-    filter: grayscale(.25);
-  }
-
+  /* stats in one slim band with soft green borders */
   .hero-stats {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 14px;
+    gap: 0;
+    padding: 14px 4px;
+    border: 1px solid rgba(15,124,118,.3);
+    border-radius: 16px;
+    background: rgba(255,255,255,.8);
+    box-shadow: 0 8px 22px rgba(15,124,118,.07);
   }
 
   .hero-stat {
     flex-direction: column;
-    gap: 8px;
+    align-items: center;
+    text-align: center;
+    gap: 2px;
   }
+
+  .hero-stat + .hero-stat { border-left: 1px solid rgba(15,124,118,.22); }
+  .hero-stat-icon { display: none; }
 
   .hero-actions { gap: 22px; }
 
-  .tech-stack { margin-top: 55px; }
-  .tech-grid { gap: 10px; }
-  .tech-card { min-height: 100px; padding: 18px 6px 14px; font-size: .74rem; }
+  /* tech stack as one row of logo chips */
+  .tech-grid { display: flex; gap: 8px; justify-content: space-between; }
+  .tech-card { flex: 1; min-height: 0; padding: 12px 0; gap: 0; border-radius: 12px; font-size: 0; }
+  .tech-logo, .tech-logo.badge { height: 26px; }
+  .tech-logo img { height: 24px; }
+  .tech-logo.wordmark img { height: 18px; }
+  .tech-logo.badge { width: 26px; border-radius: 7px; }
+  .tech-logo.badge img { height: 16px; }
+
+  .tech-stack { margin-top: 44px; }
 
   .featured-grid {
     grid-template-columns: 1fr;

@@ -587,7 +587,7 @@ videoModal.addEventListener("close", () => {
   const PARTICLES = {
     density: 15000,     // one node per this many px² (higher = fewer)
     maxNodes: 90,
-    maxNodesMobile: 38,
+    maxNodesMobile: 20,
     speed: 0.22,
     linkDistance: 130,
     cursorDistance: 170,
@@ -645,7 +645,7 @@ videoModal.addEventListener("close", () => {
         const b = nodes[j];
         const d = Math.hypot(a.x - b.x, a.y - b.y);
         if (d < LINK) {
-          ctx.strokeStyle = `rgba(${color},${(1 - d / LINK) * 0.28})`;
+          ctx.strokeStyle = `rgba(${color},${(1 - d / LINK) * (W < 768 ? 0.18 : 0.28)})`;
           ctx.beginPath();
           ctx.moveTo(a.x, a.y);
           ctx.lineTo(b.x, b.y);

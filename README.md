@@ -42,6 +42,10 @@ python3 -m http.server 8000
 | Particle background | The `PARTICLES` settings block in `js/main.js` |
 | Service pop-up text | The `<template id="service-…">` blocks in `index.html` |
 
+## After changing CSS or JS
+
+Browsers keep old copies of `styles.css` and `main.js` for a while. When you edit either file, bump the version at the end of its link in `index.html` (e.g. `styles.css?v=2026-09-30b` → `?v=2026-10-01`), so visitors get the new file straight away.
+
 ## Contact form
 
 The form posts to [FormSubmit](https://formsubmit.co) at `oriokiklaus@gmail.com`.

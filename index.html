@@ -39,7 +39,8 @@
   <!-- If JavaScript is off, show content that normally animates in -->
   <noscript><style>.fade-up, .reveal-on-scroll { opacity: 1 !important; transform: none !important; }</style></noscript>
 
-  <link rel="stylesheet" href="css/styles.css">
+  <!-- Bump the ?v= value on these two links whenever you change the CSS or JS, so browsers fetch the new files -->
+  <link rel="stylesheet" href="css/styles.css?v=2026-09-30c">
 </head>
 
 <body>
@@ -103,7 +104,10 @@
       <div class="container-wide">
         <div class="hero-grid">
           <div class="hero-text fade-up">
-            <div class="hero-kicker">Hi, I&rsquo;m Klaus Orioki</div>
+            <div class="hero-kicker">
+              <img class="hero-avatar" src="assets/profile.webp" alt="" width="64" height="64">
+              <span>Hi, I&rsquo;m Klaus Orioki</span>
+            </div>
 
             <h1>
               Turning ideas<br>
@@ -987,6 +991,6 @@
     </div>
   </footer>
 
-  <script src="js/main.js"></script>
+  <script src="js/main.js?v=2026-09-30c"></script>
 </body>
 </html>
