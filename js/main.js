@@ -61,6 +61,155 @@ document.querySelectorAll(".nav-links a").forEach(link => {
   link.addEventListener("click", () => setMenu(false));
 });
 
+/*
+  ============================================================
+  ABOUT: DEV WINDOW (editor tab → new terminal tab)
+  ============================================================
+  Plays once when the About section scrolls into view.
+  Afterwards both tabs can be clicked. Edit the text below.
+*/
+(() => {
+  const DEV_WINDOW = {
+    code: [
+      [["k","const "],["v","klaus"],["p"," = {"]],
+      [["p","  role: "],["s","\"Full-Stack Developer\""],["p",","]],
+      [["p","  based: "],["s","\"Nairobi, Kenya\""],["p",","]],
+      [["p","  builds: ["],["s","\"websites\""],["p",", "],["s","\"web apps\""],["p",", "],["s","\"APIs\""],["p","],"]],
+      [["p","  stack: ["]],
+      [["s","    \"Python\""],["p",", "],["s","\"Django\""],["p",","]],
+      [["s","    \"React\""],["p",", "],["s","\"WordPress\""],["p",","]],
+      [["p","  ],"]],
+      [["c","  // useful. working. feels right."]],
+      [["p","  approach: "],["s","\"useful → working → right\""],["p",","]],
+      [["p","};"]]
+    ],
+    term: [
+      ["cmd", "whoami"],
+      ["out", "Klaus Orioki — Full-Stack Software Developer"],
+      ["cmd", "cat focus.txt"],
+      ["out", "websites · web apps · APIs · business systems"],
+      ["cmd", "git log --oneline --reverse"],
+      ["log", "a1f3c2e", "Business & Information Technology degree"],
+      ["log", "b7d9e41", "Full-stack development — Moringa School"],
+      ["log", "c2e8f07", "Software engineering — ALX Africa"],
+      ["log", "d4b1a9c", "100+ projects shipped"]
+    ]
+  };
+
+  const win = document.getElementById("devWindow");
+  if (!win) return;
+  const codeEl = document.getElementById("dwCode");
+  const termEl = document.getElementById("dwTerm");
+  const codePane = win.querySelector(".dw-code");
+  const termPane = win.querySelector(".dw-term");
+  const termTab = win.querySelector(".dw-tab-term");
+  const plus = win.querySelector(".dw-new");
+  const tabs = win.querySelectorAll(".dw-tab");
+  const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const wait = ms => new Promise(r => setTimeout(r, ms));
+  const esc = s => s.replace(/&/g, "&amp;").replace(/</g, "&lt;");
+  const P = '<span class="tm-pr">~ $ </span>';
+
+  const codeLine = (toks, n, uptoTok = toks.length, uptoChar = 0) => {
+    let h = `<span class="ln">${n}</span>`;
+    toks.forEach(([c, t], k) => {
+      if (k < uptoTok) h += `<span class="tk-${c}">${esc(t)}</span>`;
+      else if (k === uptoTok) h += `<span class="tk-${c}">${esc(t.slice(0, uptoChar))}</span>`;
+    });
+    return h;
+  };
+  const termLine = r =>
+    r[0] === "cmd" ? P + `<span class="tm-cmd">${esc(r[1])}</span>` :
+    r[0] === "out" ? `<span class="tm-out">${esc(r[1])}</span>` :
+    `<span class="tm-hash">${r[1]}</span>  <span class="tm-out">${esc(r[2])}</span>`;
+
+  function show(pane) {
+    tabs.forEach(t => {
+      const on = t.dataset.pane === pane;
+      t.classList.toggle("active", on);
+      t.setAttribute("aria-selected", String(on));
+    });
+    codePane.classList.toggle("active", pane === "code");
+    termPane.classList.toggle("active", pane === "term");
+  }
+
+  tabs.forEach(t => t.addEventListener("click", () => show(t.dataset.pane)));
+
+  async function typeCode() {
+    codePane.classList.add("typing");
+    const done = [];
+    for (let i = 0; i < DEV_WINDOW.code.length; i++) {
+      const toks = DEV_WINDOW.code[i];
+      for (let k = 0; k < toks.length; k++) {
+        for (let c = 1; c <= toks[k][1].length; c++) {
+          codeEl.innerHTML = [...done, codeLine(toks, i + 1, k, c)].join("\n");
+          await wait(toks[k][0] === "c" ? 14 : 26);
+        }
+      }
+      done.push(codeLine(toks, i + 1));
+      codeEl.innerHTML = done.join("\n");
+      await wait(160);
+    }
+    codePane.classList.replace("typing", "done");
+  }
+
+  async function openTerminal() {
+    plus.classList.add("press");
+    await wait(260);
+    plus.classList.remove("press");
+    termTab.hidden = false;
+    termTab.classList.add("opening");
+    show("term");
+    codePane.classList.remove("done");
+    await wait(450);
+    termTab.classList.remove("opening");
+  }
+
+  async function typeTerm() {
+    termPane.classList.add("typing");
+    const out = [];
+    for (const r of DEV_WINDOW.term) {
+      if (r[0] === "cmd") {
+        for (let c = 1; c <= r[1].length; c++) {
+          termEl.innerHTML = [...out, P + `<span class="tm-cmd">${esc(r[1].slice(0, c))}</span>`].join("\n");
+          await wait(55);
+        }
+        out.push(termLine(r));
+        await wait(350);
+      } else {
+        out.push(termLine(r));
+        termEl.innerHTML = out.join("\n");
+        await wait(r[0] === "log" ? 220 : 420);
+      }
+    }
+    termEl.innerHTML = out.join("\n") + "\n" + P;
+    termPane.classList.replace("typing", "done");
+  }
+
+  function showFinished() {
+    codeEl.innerHTML = DEV_WINDOW.code.map((t, i) => codeLine(t, i + 1)).join("\n");
+    termEl.innerHTML = DEV_WINDOW.term.map(termLine).join("\n") + "\n" + P;
+    termTab.hidden = false;
+    termPane.classList.add("done");
+    show("term");
+  }
+
+  async function play() {
+    await typeCode();
+    await wait(1100);
+    await openTerminal();
+    await wait(300);
+    await typeTerm();
+  }
+
+  if (reduce) { showFinished(); return; }
+
+  const io = new IntersectionObserver(([e]) => {
+    if (e.isIntersecting) { io.disconnect(); play(); }
+  }, { threshold: 0.4 });
+  io.observe(win);
+})();
+
 /* Hero stats: count up from 0 when the page loads */
 (() => {
   const counters = document.querySelectorAll(".hero-stats [data-count]");

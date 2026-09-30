@@ -203,9 +203,17 @@
             <div class="section-kicker mono">01 — About</div>
             <h2 class="section-title">Built to solve.</h2>
           </div>
-          <p class="section-intro">
-            Good products start with good thinking.
-          </p>
+          <div class="about-intro">
+            <!-- Mini orbiting tech stack (desktop only) -->
+            <div class="mini-orbit" aria-hidden="true">
+              <div class="mo-ring mo-r1"><span class="mo-orb" style="--i:0;--n:3"><img src="assets/logos/python.svg" alt=""></span><span class="mo-orb" style="--i:1;--n:3"><img src="assets/logos/django.svg" alt=""></span><span class="mo-orb" style="--i:2;--n:3"><img src="assets/logos/react.svg" alt=""></span></div>
+              <div class="mo-ring mo-r2"><span class="mo-orb" style="--i:0;--n:3"><img src="assets/logos/wordpress.svg" alt=""></span><span class="mo-orb" style="--i:1;--n:3"><img src="assets/logos/aws.svg" alt=""></span><span class="mo-orb" style="--i:2;--n:3"><img src="assets/logos/mysql.svg" alt=""></span></div>
+              <div class="mo-core">KO</div>
+            </div>
+            <p class="section-intro">
+              Good products start with good thinking.
+            </p>
+          </div>
         </div>
 
         <div class="about-grid">
@@ -214,6 +222,29 @@
               I build modern web services
               and <span>reliable solutions.</span>
             </p>
+
+            <!--
+              Dev window: types a profile in klaus.js, then opens a terminal
+              tab and runs a short session. Text lives in js/main.js (DEV_WINDOW).
+            -->
+            <div class="dev-window" id="devWindow" aria-label="Profile shown as code and a terminal session">
+              <div class="dw-bar">
+                <span class="dw-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+                <div class="dw-tabs" role="tablist">
+                  <button type="button" class="dw-tab active" role="tab" aria-selected="true" data-pane="code">
+                    <span class="dw-tab-ico js" aria-hidden="true">JS</span> klaus.js
+                  </button>
+                  <button type="button" class="dw-tab dw-tab-term" role="tab" aria-selected="false" data-pane="term" hidden>
+                    <span class="dw-tab-ico" aria-hidden="true">&gt;_</span> zsh — klaus@nairobi
+                  </button>
+                  <span class="dw-new" aria-hidden="true">+</span>
+                </div>
+              </div>
+              <div class="dw-panes">
+                <pre class="dw-pane dw-code active" data-pane="code"><code id="dwCode"></code><span class="caret"></span></pre>
+                <pre class="dw-pane dw-term" data-pane="term"><code id="dwTerm"></code><span class="caret"></span></pre>
+              </div>
+            </div>
           </div>
 
           <div class="fade-up">
