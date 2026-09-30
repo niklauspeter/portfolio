@@ -1,546 +1,961 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <title>Klaus Orioki</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Klaus Orioki is a Nairobi-based software developer building websites, web applications, APIs and the systems behind them." />
+  <meta name="author" content="Klaus Orioki" />
+  <meta name="theme-color" content="#0f7c76" />
+  <title>Klaus Orioki — Software Developer, Nairobi</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230f7c76'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial,Helvetica,sans-serif' font-weight='700' font-size='28' fill='%23ffffff'%3EKO%3C/text%3E%3C/svg%3E" />
 
-  <link href="https://fonts.googleapis.com/css?family=Arbutus+Slab|Open+Sans:300,400,700" rel="stylesheet">
-  <link rel="stylesheet" href="fonts/icomoon/style.css">
+  <!-- Link previews (WhatsApp, LinkedIn, X, Slack) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Klaus Orioki" />
+  <meta property="og:title" content="Klaus Orioki — Software Developer, Nairobi" />
+  <meta property="og:description" content="Websites, web applications, APIs and the systems behind them — clear, functional and thoughtfully built." />
+  <!-- Once the site is live, add a preview image (1200×630) with its full URL:
+  <meta property="og:image" content="https://YOUR-DOMAIN/assets/og-image.png" /> -->
+  <meta name="twitter:card" content="summary" />
 
-  <link rel="stylesheet" href="css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/jquery-ui.css">
-  <link rel="stylesheet" href="css/owl.carousel.min.css">
-  <link rel="stylesheet" href="css/owl.theme.default.min.css">
-  <link rel="stylesheet" href="css/owl.theme.default.min.css">
+  <!-- Helps search engines understand who this site is about -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Klaus Orioki",
+    "jobTitle": "Software Developer",
+    "email": "mailto:oriokiklaus@gmail.com",
+    "telephone": "+254700206386",
+    "address": { "@type": "PostalAddress", "addressLocality": "Nairobi", "addressCountry": "KE" },
+    "sameAs": ["https://www.linkedin.com/in/peter-klaus-orioki-597b3418b/", "https://github.com/niklauspeter/", "https://medium.com/@oriokiklaus"]
+  }
+  </script>
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Herr+Von+Muellerhoff&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="css/jquery.fancybox.min.css">
+  <!-- If JavaScript is off, show content that normally animates in -->
+  <noscript><style>.fade-up, .reveal-on-scroll { opacity: 1 !important; transform: none !important; }</style></noscript>
 
-  <link rel="stylesheet" href="css/bootstrap-datepicker.css">
-
-  <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
-
-  <link rel="stylesheet" href="css/aos.css">
-
-  <link rel="stylesheet" href="css/style.css">
-  <!-- <iframe src="https://embed.cody.bot/9d9a8adf-98c8-441c-b6d4-f2fc28f0ba10" style="border:0px;" name="codyai" scrolling="no" frameborder="1" marginheight="0" marginwidth="0" height="800px" width="100%" allowfullscreen></iframe> -->
-  
-  <script>
-    window.codySettings = { widget_id: '9d9a8adf-98c8-441c-b6d4-f2fc28f0ba10' };
-    
-    !function(){var t=window,e=document,a=function(){var t=e.createElement("script");t.type="text/javascript",t.async=!0,t.src="https://trinketsofcody.com/cody-widget.js";var a=e.getElementsByTagName("script")[0];a.parentNode.insertBefore(t,a)};"complete"===document.readyState?a():t.attachEvent?t.attachEvent("onload",a):t.addEventListener("load",a,!1)}();
-    </script>
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 
-<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+<body>
 
+  <!-- ICON SET: use anywhere with <svg class="ico"><use href="#i-NAME"/></svg> -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <symbol id="i-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+    <symbol id="i-arrow-up-right" viewBox="0 0 24 24"><path d="M7 17L17 7M8 7h9v9"/></symbol>
+    <symbol id="i-arrow-down" viewBox="0 0 24 24"><path d="M12 5v14M6 13l6 6 6-6"/></symbol>
+    <symbol id="i-arrow-up" viewBox="0 0 24 24"><path d="M12 19V5M6 11l6-6 6 6"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4.5 4.5"/></symbol>
+    <symbol id="i-code" viewBox="0 0 24 24"><path d="M8.5 8l-4 4 4 4M15.5 8l4 4-4 4M13.5 5.5l-3 13"/></symbol>
+    <symbol id="i-rocket" viewBox="0 0 24 24"><path d="M12 15.5l-3.5-3.5a13 13 0 0 1 8-8.3c1.3-.4 2.7-.3 3.6.6s1 2.3.6 3.6a13 13 0 0 1-8.7 7.6z"/><path d="M8.5 12H5l2.5-3.5h3.2M12 15.5V19l3.5-2.5v-3.2"/><circle cx="15.3" cy="8.7" r="1.4"/><path d="M6.5 16.5c-1.4 1-1.9 3.5-1.9 3.5s2.5-.5 3.5-1.9"/></symbol>
+    <symbol id="i-layers" viewBox="0 0 24 24"><path d="M12 3.5l8.5 4.3-8.5 4.3-8.5-4.3z"/><path d="M3.5 12l8.5 4.3 8.5-4.3M3.5 16.2l8.5 4.3 8.5-4.3"/></symbol>
+    <symbol id="i-browser" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2.5"/><path d="M3 9h18M7 13h6M7 16h9"/><path d="M6 6.6h.01M8.3 6.6h.01" stroke-width="2.4"/></symbol>
+    <symbol id="i-braces" viewBox="0 0 24 24"><path d="M8 4.5c-2 0-2.8 1-2.8 2.8v2.4c0 1.1-.7 1.9-1.9 2.3 1.2.4 1.9 1.2 1.9 2.3v2.4c0 1.8.8 2.8 2.8 2.8M16 4.5c2 0 2.8 1 2.8 2.8v2.4c0 1.1.7 1.9 1.9 2.3-1.2.4-1.9 1.2-1.9 2.3v2.4c0 1.8-.8 2.8-2.8 2.8"/><path d="M10 12h.01M14 12h.01" stroke-width="2.6"/></symbol>
+    <symbol id="i-database" viewBox="0 0 24 24"><ellipse cx="12" cy="5.5" rx="7.5" ry="2.7"/><path d="M4.5 5.5v13c0 1.5 3.4 2.7 7.5 2.7s7.5-1.2 7.5-2.7v-13M4.5 12c0 1.5 3.4 2.7 7.5 2.7s7.5-1.2 7.5-2.7"/></symbol>
+    <symbol id="i-pen" viewBox="0 0 24 24"><path d="M16.5 3.8l3.7 3.7L8 19.7l-4.6.9.9-4.6z"/><path d="M14 6.3l3.7 3.7"/></symbol>
+    <symbol id="i-cloud" viewBox="0 0 24 24"><path d="M7 18.5a4.6 4.6 0 0 1-.7-9.1 6 6 0 0 1 11.5 1.3A4 4 0 0 1 17 18.5"/><path d="M12 12.5v8M9 15.5l3-3 3 3"/></symbol>
+    <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4.5 20.5c1.2-3.7 4.2-5.5 7.5-5.5s6.3 1.8 7.5 5.5"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path d="M6.6 3.5h2.6l1.6 4.2-2 1.3a11 11 0 0 0 6.2 6.2l1.3-2 4.2 1.6v2.6a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 4.6 5.7a2 2 0 0 1 2-2.2z"/></symbol>
+    <symbol id="i-linkedin" viewBox="0 0 24 24"><path fill="currentColor" stroke="none" d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="M4 7l8 6 8-6"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></symbol>
+    <symbol id="i-send" viewBox="0 0 24 24"><path d="M21 3L10.5 13.5"/><path d="M21 3l-6.5 18-4-7.5-7.5-4z"/></symbol>
+    <symbol id="i-chat" viewBox="0 0 24 24"><path d="M20 11.5a7.5 7.5 0 0 1-11.1 6.6L4 19.5l1.4-4.4A7.5 7.5 0 1 1 20 11.5z"/><path d="M8.5 11.5h.01M12 11.5h.01M15.5 11.5h.01" stroke-width="2.6"/></symbol>
+    <symbol id="i-youtube" viewBox="0 0 24 24"><rect x="2.5" y="5.5" width="19" height="13" rx="4"/><path d="M10.2 9.3v5.4l4.6-2.7z" fill="currentColor" stroke="none"/></symbol>
+    <symbol id="i-medium" viewBox="0 0 24 24"><ellipse cx="7" cy="12" rx="6" ry="6" fill="currentColor" stroke="none"/><ellipse cx="16.8" cy="12" rx="3" ry="5.6" fill="currentColor" stroke="none"/><ellipse cx="21.9" cy="12" rx="1.1" ry="5" fill="currentColor" stroke="none"/></symbol>
+    <symbol id="i-github" viewBox="0 0 16 16"><path fill="currentColor" stroke="none" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></symbol>
+  </svg>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="ambient"></div>
+  <div class="grid-bg"></div>
 
+  <!-- NAVIGATION -->
+  <header class="nav-wrap" id="top">
+    <div class="container-wide nav">
+      <a href="#home" class="brand">Klaus <span>Orioki.</span></a>
 
-  <div class="site-wrap">
+      <button class="menu-btn" id="menuBtn" aria-label="Open navigation" aria-expanded="false" aria-controls="navLinks">
+        <span></span><span></span><span></span>
+      </button>
 
-    <div class="site-mobile-menu site-navbar-target">
-      <div class="site-mobile-menu-header">
-        <div class="site-mobile-menu-close mt-3">
-          <span class="icon-close2 js-menu-toggle"></span>
-        </div>
-      </div>
-      <div class="site-mobile-menu-body"></div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <a href="#contact" class="nav-cta"><svg class="ico" aria-hidden="true"><use href="#i-chat"/></svg> Let's Talk</a>
     </div>
+  </header>
 
-    <header class="site-navbar py-4 js-sticky-header site-navbar-target" role="banner">
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero" id="home">
+      <!-- Animated particle network background (see HERO PARTICLES script) -->
+      <canvas class="hero-particles" id="heroParticles" aria-hidden="true"></canvas>
+      <div class="container-wide">
+        <div class="hero-grid">
+          <div class="hero-text fade-up">
+            <div class="hero-kicker">Hi, I&rsquo;m Klaus Orioki</div>
 
-      <div class="container-fluid">
-        <div class="row align-items-center justify-content-center">
+            <h1>
+              Turning ideas<br>
+              into <span class="accent">reliable</span><br>
+              web <span class="accent">solutions</span>.
+            </h1>
 
-          <div class="">
-            <nav class="site-navigation position-relative text-right" role="navigation">
-              <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
-                <li><a href="#home-section" class="nav-link">Home</a></li>
-                <li><a href="#services-section" class="nav-link">Services</a></li>
-                <li><a href="#about-section" class="nav-link">About</a></li>
+            <p class="hero-role">
+              <span class="hero-role-title">Software Developer</span>
+              <span class="hero-role-sep" aria-hidden="true"></span>
+              <span class="hero-role-place"><svg class="ico" aria-hidden="true"><use href="#i-pin"/></svg> Nairobi, Kenya</span>
+            </p>
 
-              </ul>
-            </nav>
+            <p class="hero-copy">
+              From websites and applications to the systems behind them, I turn
+              ideas and requirements into digital products that are clear,
+              functional and thoughtfully built.
+            </p>
+
+            <div class="hero-stats">
+              <!-- Numbers count up on load: edit data-count to change a stat -->
+              <div class="hero-stat">
+                <span class="hero-stat-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15.5" rx="2.5"/><path d="M3.5 10h17M8 3v4M16 3v4"/><path d="M9 15l2 2 4-4"/></svg></span>
+                <div><strong><span data-count="7">7</span>+</strong><small>Years Experience</small></div>
+              </div>
+              <div class="hero-stat">
+                <span class="hero-stat-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2.5"/><path d="M3 8.5h18"/><path d="M10 12.5l-2 2 2 2M14 12.5l2 2-2 2"/></svg></span>
+                <div><strong><span data-count="100">100</span>+</strong><small>Projects Delivered</small></div>
+              </div>
+              <div class="hero-stat">
+                <span class="hero-stat-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r="1" fill="currentColor"/></svg></span>
+                <div><strong><span data-count="100">100</span>%</strong><small>Client Focus</small></div>
+              </div>
+            </div>
+
+            <div class="hero-actions">
+              <a class="btn-main" href="#projects">View My Work</a>
+              <a class="hero-link" href="#contact"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 11.5a7.5 7.5 0 0 1-11.1 6.6L4 19.5l1.4-4.4A7.5 7.5 0 1 1 20 11.5z"/><path d="M8.5 11.5h.01M12 11.5h.01M15.5 11.5h.01" stroke-width="2.6"/></svg> Get In Touch</a>
+            </div>
           </div>
 
-          <div class=" text-center mx-5">
-            <h1 class="m-0 site-logo"><a href="index.html">Me.</a></h1>
+          <div class="hero-visual fade-up">
+            <div class="photo-stack">
+              <div class="photo-back"></div>
+              <div class="photo-card">
+                  <img class="portrait-photo" alt="Klaus Orioki" fetchpriority="high" width="576" height="576"
+                     src="assets/profile.webp">
+              </div>
+
+              <svg class="signature-flourish" viewBox="0 0 60 30" fill="none" aria-hidden="true">
+                <path d="M2 22c6 0 8-12 12-12s3 16 8 16 6-10 9-14c3-4 7-8 13-9 5-1 10 1 14 4"
+                      stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+              </svg>
+              <div class="signature" aria-hidden="true">Klaus Orioki</div>
+            </div>
           </div>
+        </div>
 
-          <div class="text-left">
-
-            <nav class="site-navigation position-relative" role="navigation">
-              <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
-                <li><a href="#portfolio-section" class="nav-link">Portfolio</a></li>
-                <li><a href="https://medium.com/@oriokiklaus" class="nav-link" target="_blank" rel="noopener noreferrer">Blog</a></li>
-                <li><a href="#contact-section" class="nav-link">Contact</a></li>
-              </ul>
-            </nav>
-
-
-            <div class="d-inline-block d-lg-none" style="position: relative; top: 3px;"><a href="#"
-                class="site-menu-toggle js-menu-toggle float-right"><span class="icon-menu h3"></span></a></div>
-
+        <!-- Tech stack: colour logos from devicon v2.17.0 (assets/logos) -->
+        <div class="tech-stack fade-up">
+          <div class="tech-stack-title">My tech stack</div>
+          <div class="tech-grid">
+            <div class="tech-card">
+              <span class="tech-logo"><img src="assets/logos/python.svg" alt="" loading="lazy"></span>
+              Python
+            </div>
+            <div class="tech-card">
+              <span class="tech-logo badge"><img src="assets/logos/django.svg" alt="" loading="lazy"></span>
+              Django
+            </div>
+            <div class="tech-card">
+              <span class="tech-logo"><img src="assets/logos/react.svg" alt="" loading="lazy"></span>
+              React
+            </div>
+            <div class="tech-card">
+              <span class="tech-logo"><img src="assets/logos/wordpress.svg" alt="" loading="lazy"></span>
+              WordPress
+            </div>
+            <div class="tech-card">
+              <span class="tech-logo wordmark"><img src="assets/logos/aws.svg" alt="" loading="lazy"></span>
+              AWS
+            </div>
+            <div class="tech-card">
+              <span class="tech-logo"><img src="assets/logos/mysql.svg" alt="" loading="lazy"></span>
+              MySQL
+            </div>
           </div>
-
         </div>
       </div>
+    </section>
 
-    </header>
-
-
-    <div class="site-blocks-cover overlay bg-light" id="home-section">
-
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-md-12 mt-lg-5 text-left align-self-center text-intro">
-            <div class="row">
-              <div class="col-lg-6">
-                <h1 class="text-black">I'm Klaus Orioki</h1>
-                <p class="lead">I'm a Software Engineer Based in Nairobi City</p>
-                <p><a href="#portfolio-section" class="btn smoothscroll btn-primary">Portfolio</a></p>
-                <br>
-                <p><a href="#jokes-section" class="btn smoothscroll btn-primary button">But first, Click me for A Joke ...</a></p>
-                <p class="chat-info text-muted mt-2" style="font-size: 0.9rem; font-style: italic;">💬 Feel free to chat with the blue bot for quick info about me!</p>
-              </div>
-            </div>
+    <!-- ABOUT -->
+    <section id="about">
+      <div class="container-wide">
+        <div class="section-head fade-up">
+          <div>
+            <div class="section-kicker mono">01 — About</div>
+            <h2 class="section-title">Built to solve.</h2>
           </div>
-        </div>
-        
-      </div>
-
-      <img src="images/klausOriokidp.jpg" alt="Image" class="img-face" data-aos="fade" style="border-radius: 100%; width: 800px; height: 800px; object-fit: cover;">
-
-
-    </div>
-
-    <!-- <div class="site-blocks-cover overlay bg-light" id="home-section">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-md-12 mt-lg-5 text-left align-self-center text-intro">
-            <div class="row">
-              <div class="col-lg-6">
-                <h1 class="text-black">I'm Klaus Orioki</h1>
-                <p class="lead">I'm a Software Engineer Based in Nairobi City</p>
-                <p><a href="#portfolio-section" class="btn smoothscroll btn-primary">Portfolio</a></p>
-                <br>
-                <p><a href="#jokes-section" class="btn smoothscroll btn-primary button">But first, Click me for A Joke ...</a></p>
-              </div> -->
-    
-              <!-- Image Section -->
-              <!-- <div class="col-lg-6 text-center">
-                <img src="images/klaus.jpg" alt="Klaus Orioki" class="img-face" data-aos="fade">
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div> -->
-    
-    
-
-
-    <div class="site-section" id="services-section">
-      <div class="container">
-        <div class="row ">
-          <div class="col-12 mb-5 position-relative">
-            <h2 class="section-title text-center mb-5">My Services</h2>
-          </div>
-
-          <div class="col-md-6 mb-4">
-            <div class="service d-flex h-100">
-              <div class="service-number mr-4"><span class="icon-style"></span></div>
-              <div class="service-about">
-                <h3>Full-Stack Web Development</h3>
-                <p>Primarily a web developer, I specialize in crafting dynamic and responsive full-stack web
-                  applications.
-                  Proficient in Python, JavaScript, and CSS, I leverage frameworks such as Django and Flask to build
-                  robust and scalable backend solutions. I also employ a combination of React, Tailwind CSS, HTML and Javascript to develop clean, interactive user interfaces.
-                  From the frontend to the backend server logic, I can diligently ensure a seamless integration of
-                  technologies,
-                  providing clients with feature-rich and modern web experiences.</p>
-                  <p><a href="#portfolio-section" class="btn smoothscroll btn-primary">Full-stack Projects</a></p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-6 mb-4">
-            <div class="service d-flex h-100">
-              <div class="service-number mr-4"><span class="icon-business_center"></span></div>
-              <div class="service-about">
-                <h3>Database Management</h3>
-                <p>As part of my backend development expertise, I provide comprehensive database management services.
-                  Well versed in various database systems including PostgreSQL, MySQL, SQLite, and MongoDB, I design and
-                  implement efficient data storage solutions.
-                  Whether it's structuring data for optimal performance or ensuring data integrity and security, or
-                  querying databases for data retreival,
-                  my database management services contribute to the overall reliability and scalability of web
-                  applications.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-6 mb-4">
-            <div class="service d-flex h-100">
-              <div class="service-number mr-4"><span class="icon-desktop_windows"></span></div>
-              <div class="service-about">
-                <h3>Backend Software Engineering</h3>
-                <p>With expertise in backend development, I offer services focused on creating powerful and efficient
-                  server-side architectures.
-                  I'm adept in REST APIs, specializing in designing and implementing backend systems that facilitate
-                  seamless communication between the frontend and the server.
-                  My skills extend to database management, covering a range of DBMS including NoSQL, PostgreSQL, MySQL, SQLite, and
-                  MongoDB, ensuring optimal data storage and retrieval.</p>
-                  <p><a href="https://github.com/niklauspeter/" class="btn smoothscroll btn-primary" target="_blank" rel="noopener noreferrer">Check out my github</a>
-                  </p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-6 mb-4">
-            <div class="service d-flex h-100">
-              <div class="service-number mr-4"><span class="icon-layers"></span></div>
-              <div class="service-about">
-                <h3>Technical Writing</h3>
-                <p>As a skilled technical writer, I excel in researching and producing engaging content on trending topics. 
-                  My work includes comprehensive exploration of technology trends, industry insights, and innovative solutions. 
-                  Whether it's blog posts, documentation, or educational materials, 
-                  I deliver content that is not only informative but also tailored to captivate and resonate with the target audience.
-                  </p>
-                  <p><a href="https://medium.com/@oriokiklaus" class="btn smoothscroll btn-primary" target="_blank" rel="noopener noreferrer">Check out my blog</a>
-                </p>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </div>
-
-    <div class="site-section" id="about-section">
-      <div class="container">
-        <div class="row ">
-          <div class="col-12 mb-4 position-relative">
-            <h2 class="section-title">About Me</h2>
-          </div>
-          <!-- <div class="col-lg-4 order-1 order-lg-2 mb-4 mb-lg-0">
-            <div class="bg-light pt-5">
-              <img src="images/klaus.jpg" alt="Image" class="img-fluid">
-            </div>
-          </div> -->
-          <div class="col-lg-4 order-1 order-lg-2 mb-4 mb-lg-0">
-            <div class="bg-white pt-5 text-center">
-              <img src="images/klausOriokidp.jpg" alt="Image" class="img-fluid" 
-                   style="border-radius: 100%; width: 300px; height: 300px; object-fit: cover;">
-            </div>
-          </div>
-          <div class="col-lg-4 order-2 order-lg-1">
-            <p>
-              Hey there! Meet Me! A versatile and passionate software engineer with a unique blend of business and information technology education. 
-              My academic journey started with a focus on understanding the intersection of technology and business, earning a degree in Business and Information Technology from university. 
-              Eager to delve deeper into the world of software development, I pursued additional certifications at Moringa School in full-stack web development and later at ALX Africa in software engineering, honing my technical skills and staying abreast of the latest industry trends.</p>
-            
-          </div>
-          
-          <div class="col-lg-4 order-3 order-lg-3">
-            <p>Excited about collaborative endeavors, I am enthusiastic about pushing boundaries and contributing to larger-scale projects, particularly in the realm of microservices. 
-              </p>
-            <p>I am committed to creating more wholesome and agile systems, leveraging my skills to foster innovation and efficiency within dynamic team environments. 
-              <br>Let's embark on a journey of innovation and excellence together!</p>
-            <p><a href="#contact-section" class="btn smoothscroll btn-primary">Contact Me</a></p>
-          </div>
-          
-        </div>
-        <div class="row">
-          <p>Throughout my career, I have applied my knowledge through freelance work, designing standalone websites and developing full-stack web applications. 
-            I take pride in delivering not just functional solutions but also ensuring a seamless user experience. 
-            As a dedicated technical writer, I've contributed to various websites, delivering engaging and optimized content that resonates with audiences.
+          <p class="section-intro">
+            Good products start with good thinking.
           </p>
         </div>
-      </div>
-    </div>
 
-
-
-
-    <section class="site-section block__62272" id="portfolio-section">
-
-
-      <div class="container">
-        <div class="row mb-5">
-          <div class="col-12 position-relative">
-            <h2 class="section-title text-center mb-5">My Portfolio</h2>
-             <p><a href="#about-section" class="section-title text-center mb-5" >Back to About Me</a></p>
-          </div>
-        </div>
-    
-
-        <div id="posts" class="row no-gutter">
-          <div class="item web col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4 mb-4">
-            <iframe width="350" height="285" src="https://www.youtube.com/embed/WTic0MyRAmE?si=gKct7yUyX0cF_D0C" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe class="item-wrap fancybox">
-              <span class="icon-search2"></span>
-            </a>
-          </div>
-
-        
-          <div class="item web col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4 mb-4">
-            <iframe width="350" height="285" src="https://www.youtube.com/embed/92qOXCdBr7g?si=8Ls_NEFyQIpbPNFv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe class="item-wrap fancybox">
-              <span class="icon-search2"></span>
-            </a>
-          </div>
-          <div class="item web col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4 mb-4">
-            <iframe width="350" height="285" src="https://www.youtube.com/embed/JWyR2XxsxjI?si=aMR7cNyiHtJi4dBU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe class="item-wrap fancybox">
-              <span class="icon-search2"></span>
-              
-            </a>
-          </div>
-
-          <div class="item brand col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4 mb-4">
-            <iframe width="350" height="285" src="https://www.youtube.com/embed/iAD5C9r9A1A?si=nWb4Nbdln_wo7Vva" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe class="item-wrap fancybox">
-              <span class="icon-search2"></span>
-        
-            </a>
-          </div>
-
-          
-          <!-- OMA Chatbot Section -->
-          <div class="item design col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4 mb-4">
-            <a href="https://chenge.pythonanywhere.com/chat" target="_blank" style="position: relative; display: inline-block;">
-              <img class="img-fluid" src="images/post_5.jpg" alt="Chatbot Image">
-              <div class="description-overlay">
-                One Million Avocados(OMA) Chatbot - </br>Ask about Anything Avocado!
-              </div>
-            </a>
-          </div>
-
-          <!-- OMA Investor Revenue Calculator Section -->
-          <div class="item design col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4 mb-4">
-            <a href="https://klausorioki.pythonanywhere.com/" target="_blank" style="position: relative; display: inline-block;">
-              <img class="img-fluid" src="images/post_2.jpg" alt="Revenue Calculator Image">
-              <div class="description-overlay">
-                One Million Avocados Investor Revenue Calculator - </br>Estimate your gains investing in OMA!
-              </div>
-            </a>
-          </div>
-
-        </div>
-      </div>
-
-    </section>
-
-
-    <section class="site-section bg-dark">
-      <div class="container">
-        <div class="row">
-          <div class="col-12 mb-5 position-relative">
-            <h2 class="section-title text-center mb-5 text-white">A nice quote to keep you going</h2>
-          </div>
-        </div>
-        <div class="owl-carousel slide-one-item">
-          <div class="slide">
-            <blockquote>
-              <p>“One day, perhaps, you will see for yourself that regrets are as nothing. 
-                The value lies in how they are answered.”</p>
-              
-              <p><cite>&mdash; — Steven Erikson</cite></p>
-            </blockquote>
-          </div>
-          <div class="slide">
-            <blockquote>
-              <p>“There is no struggle too vast, no odds too overwhelming, for even should we fail - should we fall 
-                - we will know that we have lived.”</p>
-              <p><cite>&mdash; — Steven Erikson</cite></p>
-            </blockquote>
-          </div>
-          <div class="slide">
-            <blockquote>
-              <p>“Through the gamut of life we struggled for control, for a means to fashion the world around us,
-                an eternal, hopeless hunt for the privilege of being able to predict the shape of our lives.".</p>
-              <p><cite>&mdash; — Steven Erikson</cite></p>
-            </blockquote>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    
-    <!-- <section class="site-section" id="jokes-section">
-      
-        <div class="container" style="padding: 2rem 4rem;">
-          <div class="row mb-5">
-            <div class="col-12 position-relative">
-              <h3 class="section-title text-center mb-5" style = "color: #f39c11;">I integrated a Joke API, press the button to try it out!</h3>
-            </div>
-        
-          <button id="button" type='button'>Get Joke</button>
-          <br>
-          <p id="setup"></p>
-          <br>
-          <br>
-          <p id="punchline"></p>
-          <p id="error"></p>
-        </div>
-        <div >
-        <div class="col-lg-4 order-3 order-lg-3">
-        <p><a href="#home-section" class="btn smoothscroll btn-primary">Back to the top...</a></p>
-      </div>
-    </div>
-      </div>
-    </section> -->
-    <section class="site-section" id="jokes-section">
-      <div class="container" style="padding: 2rem 4rem;">
-        <div class="row mb-5">
-          <div class="col-12 position-relative">
-            <h3 class="section-title text-center mb-5" style="color: #f39c11;">
-              I integrated a Joke API, press the button to try it out!
-            </h3>
-          </div>
-        </div>
-        
-        <div class="text-center">
-          <button id="button" type="button">Get Joke</button>
-        </div>
-        
-        <div class="joke-text text-center mt-4">
-          <p id="setup" class="setup"></p>
-          <p id="punchline" class="punchline"></p>
-          <p id="error" class="error"></p>
-        </div>
-    
-        <div class="text-center mt-5">
-          <p><a href="#home-section" class="btn smoothscroll btn-primary">Back to the top...</a></p>
-        </div>
-      </div>
-    </section>
-
-
-    <section class="site-section" id="contact-section">
-      <div class="container">
-        <div class="row">
-          <div class="col-12 mb-5 position-relative">
-            <h2 class="section-title text-center mb-5">Contact Form</h2>
-          </div>
-        </div>
-        <form action="https://formsubmit.co/oriokiklaus@gmail.com" method = "Post" class="form">
-          <div class="row mb-4">
-            <div class="form-group col-6">
-              <input type="text" class="form-control" placeholder="First name" name = "name">
-            </div>
-            <div class="form-group col-6">
-              <input type="text" class="form-control" placeholder="Last name" name = "name">
-            </div>
-          </div>
-
-          <div class="row mb-4">
-            <div class="form-group col-12">
-              <input type="email" class="form-control" placeholder="Email address" name = "email">
-            </div>
-          </div>
-
-          <div class="row mb-4">
-            <div class="form-group col-12">
-              <input type="text" class="form-control" placeholder="Subject of the message" name = "subject">
-            </div>
-          </div>
-
-          <div class="row mb-4">
-            <div class="form-group col-12">
-              <textarea id="" cols="30" rows="10" class="form-control"
-                placeholder="Type your message here.." name = "message"></textarea>
-            </div>
-          </div>
-          <input type="hidden" name="_captcha" value="false">
-          
-          <div class="row">
-            <div class="col-md-6">
-              <input type="submit" class="btn btn-primary" value="Send Message">
-            </div>
-          </div>
-
-        </form>
-      </div>
-      <!-- <iframe src="https://embed.cody.bot/9d9a8adf-98c8-441c-b6d4-f2fc28f0ba10" style="border:0px;" name="codyai" scrolling="no" frameborder="1" marginheight="0" marginwidth="0" height="800px" width="100%" allowfullscreen></iframe> -->
-    </section>
-
-    <footer class="site-section bg-light footer">
-      <div class="container">
-        <div class="row mb-5">
-          <div class="col-md-3">
-            <h3 class="footer-title"> Address</h3>
-            <p><span class="d-inline-block d-md-block">Nairobi, Kenya</span></p> 
-            <p><span class="d-inline-block d-md-block">Oriokiklaus@gmail.com</span></p> 
-            <p><span class="d-inline-block d-md-block">Tel: +254 700 206 386</span> 
-              </p>
-          </div>
-          <div class="col-md-5 mx-auto">
-            <div class="row">
-              <div class="col-lg-4">
-                <h3 class="footer-title">Services</h3>
-                <ul class="list-unstyled">
-                  <li><a href="#">Web Application Developement</a></li>
-                  <li><a href="#">Database Managament</a></li>
-                  <li><a href="#">Content Creation</a></li>
-                </ul>
-              </div>
-              <div class="col-lg-4">
-                <h3 class="footer-title">Resources</h3>
-                <ul class="list-unstyled">
-                  <li><a href="#">Web Application Developement</a></li>
-                  <li><a href="#">Database Managament</a></li>
-                  <li><a href="#">Content Creation</a></li>
-                </ul>
-              </div>
-              <div class="col-lg-4">
-                <h3 class="footer-title">Links</h3>
-                <ul class="list-unstyled">
-                  <li><a href="#">Web Application Developement</a></li>
-                  <li><a href="#">Database Managament</a></li>
-                  <li><a href="#">Content Creation</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <h3 class="footer-title">Follow Me</h3>
-            <a href="#" class="social-circle"><span class="icon-twitter"></span></a>
-            <a href="#" class="social-circle"><span class="icon-facebook"></span></a>
-            <a href="#" class="social-circle"><span class="icon-instagram"></span></a>
-            <a href="#" class="social-circle"><span class="icon-dribbble"></span></a>
-            <a href="https://www.linkedin.com/in/klaus-orioki-597b3418b/" class="social-circle"><span class="icon-linkedin"></span></a>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-12 text-center">
-            <p>
-              
-              Copyright &copy;
-              <script>document.write(new Date().getFullYear());</script> @niklauspeter</i> by <a href="niklauspeter.github.io"
-                target="_blank">Oriokiklaus@gmail.com</a>
-              
+        <div class="about-grid">
+          <div class="fade-up">
+            <p class="about-statement">
+              I build modern web services
+              and <span>reliable solutions.</span>
             </p>
           </div>
+
+          <div class="fade-up">
+            <p class="about-copy">
+              I like getting beyond the brief; understanding the problem, finding
+              the simplest way forward, and building something that feels
+              considered from the inside out.
+            </p>
+
+            <p class="about-copy">
+              Whether it&rsquo;s a website, application or business system, I approach
+              every project with the same goal: make it useful, make it work,
+              and make it feel right.
+            </p>
+
+            <button type="button" class="about-more" data-service="about" aria-haspopup="dialog">
+              Learn more about me <svg class="ico" aria-hidden="true"><use href="#i-arrow-right"/></svg>
+            </button>
+
+            <div class="process-wrap">
+              <div class="process-label mono">How I work</div>
+              <ol class="process">
+                <li class="step fade-up">
+                  <div class="step-head">
+                    <span class="step-icon"><svg class="ico" aria-hidden="true"><use href="#i-search"/></svg></span>
+                  </div>
+                  <span class="step-num mono">Step 01</span>
+                  <h3>Discover</h3>
+                  <p>We talk through your goals, users and constraints, then agree on a clear scope and plan.</p>
+                </li>
+                <li class="step fade-up">
+                  <div class="step-head">
+                    <span class="step-icon"><svg class="ico" aria-hidden="true"><use href="#i-code"/></svg></span>
+                  </div>
+                  <span class="step-num mono">Step 02</span>
+                  <h3>Build</h3>
+                  <p>I design and develop in focused iterations, sharing progress so you can give feedback early.</p>
+                </li>
+                <li class="step fade-up">
+                  <div class="step-head">
+                    <span class="step-icon"><svg class="ico" aria-hidden="true"><use href="#i-rocket"/></svg></span>
+                  </div>
+                  <span class="step-num mono">Step 03</span>
+                  <h3>Launch &amp; Support</h3>
+                  <p>I deploy, test and hand over, then stay on for fixes, updates and improvements.</p>
+                </li>
+              </ol>
+            </div>
+          </div>
         </div>
       </div>
-    </footer>
+    </section>
 
-  </div> <!-- .site-wrap -->
+    <!-- FEATURED PROJECTS -->
+    <section class="projects-section" id="projects">
+      <div class="container-wide">
+        <div class="section-head fade-up">
+          <div>
+            <div class="section-kicker mono">02 — Selected work</div>
+            <h2 class="section-title">Featured projects.</h2>
+          </div>
+          <p class="section-intro">
+            A selection of websites and web applications I've designed and built.
+            Click any project preview to visit it.
+          </p>
+        </div>
 
-  <script src="js/jquery-3.3.1.min.js"></script>
-  <script src="js/jquery-ui.js"></script>
-  <script src="js/popper.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/owl.carousel.min.js"></script>
-  <script src="js/jquery.easing.1.3.js"></script>
-  <script src="js/aos.js"></script>
-  <script src="js/jquery.fancybox.min.js"></script>
-  <script src="js/jquery.sticky.js"></script>
-  <script src="js/isotope.pkgd.min.js"></script>
+        <!--
+          Toolbar: type tabs match data-category, the industry dropdown
+          matches data-industry. Both filters combine.
+        -->
+        <div class="projects-toolbar fade-up">
+        <!-- Filter tabs: data-filter matches each card's data-category -->
+          <div class="project-filters" role="tablist" aria-label="Filter projects">
+            <button class="filter-tab active" type="button" role="tab" aria-selected="true" data-filter="websites">Websites<span class="filter-count"></span></button>
+            <button class="filter-tab" type="button" role="tab" aria-selected="false" data-filter="web-apps">Web Applications<span class="filter-count"></span></button>
+            <button class="filter-tab" type="button" role="tab" aria-selected="false" data-filter="all">All<span class="filter-count"></span></button>
+          </div>
 
-  <script src="js/joke.js"></script>
+          <div class="industry-filter" id="industryFilter">
+            <button type="button" class="industry-btn" id="industryBtn" aria-haspopup="listbox" aria-expanded="false" aria-controls="industryMenu">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 5h18l-7 8.5V19l-4 2v-7.5L3 5z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+              <span>Industry:</span>
+              <span class="industry-current" id="industryCurrent">All</span>
+              <svg class="industry-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <ul class="industry-menu" id="industryMenu" role="listbox" aria-label="Filter projects by industry">
+              <li><button type="button" class="industry-option active" role="option" aria-selected="true" data-industry="all">All industries<span class="industry-count"></span></button></li>
+              <li class="industry-divider" role="presentation"></li>
+              <li><button type="button" class="industry-option" role="option" aria-selected="false" data-industry="ecommerce">E-commerce<span class="industry-count"></span></button></li>
+              <li><button type="button" class="industry-option" role="option" aria-selected="false" data-industry="tours">Tours &amp; Travels<span class="industry-count"></span></button></li>
+              <li><button type="button" class="industry-option" role="option" aria-selected="false" data-industry="portfolio">Portfolios<span class="industry-count"></span></button></li>
+              <li><button type="button" class="industry-option" role="option" aria-selected="false" data-industry="wellness">Spa &amp; Wellness<span class="industry-count"></span></button></li>
+              <li><button type="button" class="industry-option" role="option" aria-selected="false" data-industry="finance">Finance<span class="industry-count"></span></button></li>
+              <li><button type="button" class="industry-option" role="option" aria-selected="false" data-industry="trucking">Trucking<span class="industry-count"></span></button></li>
+            </ul>
+          </div>
+        </div>
+
+        <!--
+          To add a project: copy an <article>, set data-category to
+          "websites" or "web-apps", and data-industry to one of:
+          ecommerce, tours, portfolio, wellness, finance, trucking.
+          Numbers and counts are filled in automatically.
+        -->
+        <div class="featured-grid" id="featuredGrid">
+
+          <article class="featured-card reveal-on-scroll" data-category="websites" data-industry="tours">
+            <a class="featured-image-link" href="https://zabuniexperiences.com/" target="_blank" rel="noopener noreferrer" aria-label="View Zabuni Experiences website">
+              <div class="featured-image">
+                <img src="assets/projects/zabuni-experiences.webp" alt="Zabuni Experiences website homepage" width="800" height="500" loading="lazy">
+              </div>
+            </a>
+            <div class="featured-info">
+              <div class="featured-meta">
+                <span class="featured-type">Safari &amp; travel</span>
+                <span class="featured-number"></span>
+              </div>
+              <h3>Zabuni Experiences</h3>
+              <p>East African safari company offering tailored trips, destination guides and a Safari Saver payment plan.</p>
+              <div class="featured-tags">
+                <button type="button" class="featured-tag industry-tag" data-set-industry="tours">Tours &amp; Travels</button>
+                <span class="featured-tag">Safari planner</span>
+                <span class="featured-tag">Payment plans</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="featured-card reveal-on-scroll" data-category="websites" data-industry="wellness">
+            <a class="featured-image-link" href="https://ariaaurawellnessandspa.co.ke/" target="_blank" rel="noopener noreferrer" aria-label="View Aria Aura Wellness &amp; Spa website">
+              <div class="featured-image">
+                <img src="assets/projects/aria-aura-wellness-and-spa.webp" alt="Aria Aura Wellness &amp; Spa website homepage" width="800" height="500" loading="lazy">
+              </div>
+            </a>
+            <div class="featured-info">
+              <div class="featured-meta">
+                <span class="featured-type">Wellness &amp; spa</span>
+                <span class="featured-number"></span>
+              </div>
+              <h3>Aria Aura Wellness &amp; Spa</h3>
+              <p>Spa and wellness site showcasing massage and other services, with online booking and social links.</p>
+              <div class="featured-tags">
+                <button type="button" class="featured-tag industry-tag" data-set-industry="wellness">Spa &amp; Wellness</button>
+                <span class="featured-tag">Online booking</span>
+                <span class="featured-tag">Social integration</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="featured-card reveal-on-scroll" data-category="web-apps" data-industry="">
+            <a class="featured-image-link video-link" href="https://www.youtube.com/watch?v=WTic0MyRAmE" target="_blank" rel="noopener noreferrer" data-video="WTic0MyRAmE" aria-label="Play the Inventory &amp; CRM System demo video">
+              <div class="featured-image video-thumb">
+                <img src="https://i.ytimg.com/vi/WTic0MyRAmE/hqdefault.jpg" alt="" width="480" height="360" loading="lazy" onerror="this.remove()">
+                <span class="play-btn"><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z" fill="currentColor"/></svg></span>
+                <span class="video-badge mono">Video demo</span>
+              </div>
+            </a>
+            <div class="featured-info">
+              <div class="featured-meta">
+                <span class="featured-type">Business system</span>
+                <span class="featured-number"></span>
+              </div>
+              <h3>Inventory &amp; CRM System</h3>
+              <p>Django inventory management and customer relationship management system, shown in a full video walkthrough.</p>
+              <div class="featured-tags">
+                <span class="featured-tag">Django</span>
+                <span class="featured-tag">Inventory</span>
+                <span class="featured-tag">CRM</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="featured-card reveal-on-scroll" data-category="websites" data-industry="ecommerce">
+            <a class="featured-image-link" href="https://k-elec.co.ke/" target="_blank" rel="noopener noreferrer" aria-label="View K-Elec website">
+              <div class="featured-image">
+                <img src="assets/projects/k-elec.webp" alt="K-Elec website homepage" width="800" height="500" loading="lazy">
+              </div>
+            </a>
+            <div class="featured-info">
+              <div class="featured-meta">
+                <span class="featured-type">Electronics store</span>
+                <span class="featured-number"></span>
+              </div>
+              <h3>K-Elec</h3>
+              <p>Korean technology retailer in Kenya selling TVs, home appliances and Korean cosmetics, with vendor sign-up.</p>
+              <div class="featured-tags">
+                <button type="button" class="featured-tag industry-tag" data-set-industry="ecommerce">E-commerce</button>
+                <span class="featured-tag">Multi-vendor</span>
+                <span class="featured-tag">Product catalogue</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="featured-card reveal-on-scroll" data-category="websites" data-industry="finance">
+            <a class="featured-image-link" href="https://gtriofinance.co.ke/audit/" target="_blank" rel="noopener noreferrer" aria-label="View G-Trio Financial Consultant website">
+              <div class="featured-image">
+                <img src="assets/projects/g-trio-financial-consultant.webp" alt="G-Trio Financial Consultant website homepage" width="800" height="500" loading="lazy">
+              </div>
+            </a>
+            <div class="featured-info">
+              <div class="featured-meta">
+                <span class="featured-type">Financial consultancy</span>
+                <span class="featured-number"></span>
+              </div>
+              <h3>G-Trio Financial Consultant</h3>
+              <p>Consultancy site covering audit, tax, advisory, accounting, payroll and bookkeeping services.</p>
+              <div class="featured-tags">
+                <button type="button" class="featured-tag industry-tag" data-set-industry="finance">Finance</button>
+                <span class="featured-tag">Service pages</span>
+                <span class="featured-tag">Blog</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="featured-card reveal-on-scroll" data-category="websites" data-industry="finance">
+            <a class="featured-image-link" href="https://aivagroup.co.ke/" target="_blank" rel="noopener noreferrer" aria-label="View AIVA Insurance Agency website">
+              <div class="featured-image">
+                <img src="assets/projects/aiva-insurance-agency.webp" alt="AIVA Insurance Agency website homepage" width="800" height="500" loading="lazy">
+              </div>
+            </a>
+            <div class="featured-info">
+              <div class="featured-meta">
+                <span class="featured-type">Insurance agency</span>
+                <span class="featured-number"></span>
+              </div>
+              <h3>AIVA Insurance Agency</h3>
+              <p>Independent insurance agency site covering insurance, retirement planning and unit trusts, with quote requests and claims support.</p>
+              <div class="featured-tags">
+                <button type="button" class="featured-tag industry-tag" data-set-industry="finance">Finance</button>
+                <span class="featured-tag">Product pages</span>
+                <span class="featured-tag">Lead capture</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="featured-card reveal-on-scroll" data-category="websites" data-industry="portfolio">
+            <a class="featured-image-link" href="https://labannjuguna.com/" target="_blank" rel="noopener noreferrer" aria-label="View Laban Njuguna website">
+              <div class="featured-image">
+                <img src="assets/projects/laban-njuguna.webp" alt="Laban Njuguna website homepage" width="800" height="500" loading="lazy">
+              </div>
+            </a>
+            <div class="featured-info">
+              <div class="featured-meta">
+                <span class="featured-type">Personal brand</span>
+                <span class="featured-number"></span>
+              </div>
+              <h3>Laban Njuguna</h3>
+              <p>Personal brand website for an entrepreneur and CEO, presenting his businesses, foundations and features.</p>
+              <div class="featured-tags">
+                <button type="button" class="featured-tag industry-tag" data-set-industry="portfolio">Portfolios</button>
+                <span class="featured-tag">Personal brand</span>
+                <span class="featured-tag">LinkedIn CTA</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="featured-card reveal-on-scroll" data-category="web-apps" data-industry="">
+            <a class="featured-image-link video-link" href="https://www.youtube.com/watch?v=92qOXCdBr7g" target="_blank" rel="noopener noreferrer" data-video="92qOXCdBr7g" aria-label="Play the Employee Management System demo video">
+              <div class="featured-image video-thumb">
+                <img src="https://i.ytimg.com/vi/92qOXCdBr7g/hqdefault.jpg" alt="" width="480" height="360" loading="lazy" onerror="this.remove()">
+                <span class="play-btn"><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z" fill="currentColor"/></svg></span>
+                <span class="video-badge mono">Video demo</span>
+              </div>
+            </a>
+            <div class="featured-info">
+              <div class="featured-meta">
+                <span class="featured-type">HR system</span>
+                <span class="featured-number"></span>
+              </div>
+              <h3>Employee Management System</h3>
+              <p>Employee management system for handling staff records, shown in a full video walkthrough.</p>
+              <div class="featured-tags">
+                <span class="featured-tag">Full-Stack</span>
+                <span class="featured-tag">Video demo</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="featured-card reveal-on-scroll" data-category="websites" data-industry="ecommerce">
+            <a class="featured-image-link" href="https://wabelstore.com/" target="_blank" rel="noopener noreferrer" aria-label="View Wabel Store website">
+              <div class="featured-image">
+                <img src="assets/projects/wabel-store.webp" alt="Wabel Store website homepage" width="800" height="500" loading="lazy">
+              </div>
+            </a>
+            <div class="featured-info">
+              <div class="featured-meta">
+                <span class="featured-type">Phone store</span>
+                <span class="featured-number"></span>
+              </div>
+              <h3>Wabel Store</h3>
+              <p>Bilingual phone and electronics store promoting the latest iPhone models and installment offers.</p>
+              <div class="featured-tags">
+                <button type="button" class="featured-tag industry-tag" data-set-industry="ecommerce">E-commerce</button>
+                <span class="featured-tag">Installment offers</span>
+                <span class="featured-tag">Bilingual</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="featured-card reveal-on-scroll" data-category="websites" data-industry="tours">
+            <a class="featured-image-link" href="https://christripmasaimarasafaris.co.ke/" target="_blank" rel="noopener noreferrer" aria-label="View ChrisTrip Tours &amp; Safaris website">
+              <div class="featured-image">
+                <img src="assets/projects/christrip-tours-and-safaris.webp" alt="ChrisTrip Tours &amp; Safaris website homepage" width="800" height="500" loading="lazy">
+              </div>
+            </a>
+            <div class="featured-info">
+              <div class="featured-meta">
+                <span class="featured-type">Safari operator</span>
+                <span class="featured-number"></span>
+              </div>
+              <h3>ChrisTrip Tours &amp; Safaris</h3>
+              <p>Masai Mara safari company with tour packages, a safari planner and custom trip requests.</p>
+              <div class="featured-tags">
+                <button type="button" class="featured-tag industry-tag" data-set-industry="tours">Tours &amp; Travels</button>
+                <span class="featured-tag">Safari packages</span>
+                <span class="featured-tag">Custom trips</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="featured-card reveal-on-scroll" data-category="websites" data-industry="wellness">
+            <a class="featured-image-link" href="https://heratherapy.co.ke/" target="_blank" rel="noopener noreferrer" aria-label="View Hera Therapy website">
+              <div class="featured-image">
+                <img src="assets/projects/hera-therapy.webp" alt="Hera Therapy website homepage" width="800" height="500" loading="lazy">
+              </div>
+            </a>
+            <div class="featured-info">
+              <div class="featured-meta">
+                <span class="featured-type">Therapy practice</span>
+                <span class="featured-number"></span>
+              </div>
+              <h3>Hera Therapy</h3>
+              <p>Therapy practice website with appointment booking and an online mental self-assessment.</p>
+              <div class="featured-tags">
+                <button type="button" class="featured-tag industry-tag" data-set-industry="wellness">Spa &amp; Wellness</button>
+                <span class="featured-tag">Appointments</span>
+                <span class="featured-tag">Self-assessment</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="featured-card reveal-on-scroll" data-category="web-apps" data-industry="">
+            <a class="featured-image-link video-link" href="https://www.youtube.com/watch?v=JWyR2XxsxjI" target="_blank" rel="noopener noreferrer" data-video="JWyR2XxsxjI" aria-label="Play the FindArt demo video">
+              <div class="featured-image video-thumb">
+                <img src="https://i.ytimg.com/vi/JWyR2XxsxjI/hqdefault.jpg" alt="" width="480" height="360" loading="lazy" onerror="this.remove()">
+                <span class="play-btn"><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z" fill="currentColor"/></svg></span>
+                <span class="video-badge mono">Video demo</span>
+              </div>
+            </a>
+            <div class="featured-info">
+              <div class="featured-meta">
+                <span class="featured-type">Web application</span>
+                <span class="featured-number"></span>
+              </div>
+              <h3>FindArt</h3>
+              <p>The FindArt web application, demonstrated end to end in a video walkthrough.</p>
+              <div class="featured-tags">
+                <span class="featured-tag">Full-Stack</span>
+                <span class="featured-tag">Video demo</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="featured-card reveal-on-scroll" data-category="websites" data-industry="ecommerce">
+            <a class="featured-image-link" href="http://rawft.com/" target="_blank" rel="noopener noreferrer" aria-label="View Rawft website">
+              <div class="featured-image">
+                <img src="assets/projects/rawft.webp" alt="Rawft website homepage" width="800" height="500" loading="lazy">
+              </div>
+            </a>
+            <div class="featured-info">
+              <div class="featured-meta">
+                <span class="featured-type">Fashion store</span>
+                <span class="featured-number"></span>
+              </div>
+              <h3>Rawft</h3>
+              <p>Clothing store for kids&rsquo; and men&rsquo;s wear, with size and colour options on every product.</p>
+              <div class="featured-tags">
+                <button type="button" class="featured-tag industry-tag" data-set-industry="ecommerce">E-commerce</button>
+                <span class="featured-tag">Product variations</span>
+                <span class="featured-tag">Online shop</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="featured-card reveal-on-scroll" data-category="websites" data-industry="tours">
+            <a class="featured-image-link" href="https://gotellworldexposures.com/" target="_blank" rel="noopener noreferrer" aria-label="View Go Tell World Class Exposures website">
+              <div class="featured-image">
+                <img src="assets/projects/go-tell-world-class-exposures.webp" alt="Go Tell World Class Exposures website homepage" width="800" height="500" loading="lazy">
+              </div>
+            </a>
+            <div class="featured-info">
+              <div class="featured-meta">
+                <span class="featured-type">Cultural tourism</span>
+                <span class="featured-number"></span>
+              </div>
+              <h3>Go Tell World Class Exposures</h3>
+              <p>Cultural and culinary travel experiences, with a destination, guest and date booking form.</p>
+              <div class="featured-tags">
+                <button type="button" class="featured-tag industry-tag" data-set-industry="tours">Tours &amp; Travels</button>
+                <span class="featured-tag">Booking form</span>
+                <span class="featured-tag">Experiences</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="featured-card reveal-on-scroll" data-category="websites" data-industry="ecommerce">
+            <a class="featured-image-link" href="https://www.ebrahimelectronics.co.ke/" target="_blank" rel="noopener noreferrer" aria-label="View Ebrahim Electronics website">
+              <div class="featured-image">
+                <img src="assets/projects/ebrahim-electronics.webp" alt="Ebrahim Electronics website homepage" width="800" height="500" loading="lazy">
+              </div>
+            </a>
+            <div class="featured-info">
+              <div class="featured-meta">
+                <span class="featured-type">Electronics store</span>
+                <span class="featured-number"></span>
+              </div>
+              <h3>Ebrahim Electronics</h3>
+              <p>Electronics retailer with a searchable catalogue of laptops, desktops, printers, cameras and more.</p>
+              <div class="featured-tags">
+                <button type="button" class="featured-tag industry-tag" data-set-industry="ecommerce">E-commerce</button>
+                <span class="featured-tag">Product search</span>
+                <span class="featured-tag">Categories</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="featured-card reveal-on-scroll" data-category="web-apps" data-industry="">
+            <a class="featured-image-link video-link" href="https://www.youtube.com/watch?v=iAD5C9r9A1A" target="_blank" rel="noopener noreferrer" data-video="iAD5C9r9A1A" aria-label="Play the Form Scanner demo video">
+              <div class="featured-image video-thumb">
+                <img src="https://i.ytimg.com/vi/iAD5C9r9A1A/hqdefault.jpg" alt="" width="480" height="360" loading="lazy" onerror="this.remove()">
+                <span class="play-btn"><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z" fill="currentColor"/></svg></span>
+                <span class="video-badge mono">Video demo</span>
+              </div>
+            </a>
+            <div class="featured-info">
+              <div class="featured-meta">
+                <span class="featured-type">Web application</span>
+                <span class="featured-number"></span>
+              </div>
+              <h3>Form Scanner</h3>
+              <p>A form-scanning application, demonstrated end to end in a video walkthrough.</p>
+              <div class="featured-tags">
+                <span class="featured-tag">Full-Stack</span>
+                <span class="featured-tag">Video demo</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="featured-card reveal-on-scroll" data-category="websites" data-industry="tours">
+            <a class="featured-image-link" href="https://tastetrailsandtours.com/" target="_blank" rel="noopener noreferrer" aria-label="View Taste Trails and Tours website">
+              <div class="featured-image">
+                <img src="assets/projects/taste-trails-and-tours.webp" alt="Taste Trails and Tours website homepage" width="800" height="500" loading="lazy">
+              </div>
+            </a>
+            <div class="featured-info">
+              <div class="featured-meta">
+                <span class="featured-type">Tour operator</span>
+                <span class="featured-number"></span>
+              </div>
+              <h3>Taste Trails and Tours</h3>
+              <p>Kenyan tour operator showcasing travel packages and hidden-gem destinations, with FAQs.</p>
+              <div class="featured-tags">
+                <button type="button" class="featured-tag industry-tag" data-set-industry="tours">Tours &amp; Travels</button>
+                <span class="featured-tag">Tour packages</span>
+                <span class="featured-tag">FAQs</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+        <p class="projects-empty" id="projectsEmpty" hidden>
+          <strong>No projects here yet.</strong> Work in this category is on the way &mdash; check back soon.
+        </p>
+
+        <button type="button" class="view-all" id="viewMoreBtn" aria-controls="featuredGrid">
+          <span class="view-all-label">View more</span> <svg class="ico" aria-hidden="true"><use href="#i-arrow-down"/></svg>
+        </button>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services">
+      <div class="container-wide">
+        <div class="section-head fade-up">
+          <div>
+            <div class="section-kicker mono">03 — What I do</div>
+            <h2 class="section-title">Services.</h2>
+          </div>
+          <p class="section-intro">
+            From concept to deployment, I build and maintain practical digital
+            solutions for businesses and organizations.
+          </p>
+        </div>
+
+        <div class="services-grid">
+          <article class="service-card fade-up" data-service="fullstack" tabindex="0" role="button" aria-haspopup="dialog">
+            <div class="service-icon"><svg class="ico" aria-hidden="true"><use href="#i-layers"/></svg></div>
+            <h3>Full-Stack Development</h3>
+            <p>Custom web applications using Python, Django, React and modern web technologies.</p>
+            <span class="service-more mono">Learn more <svg class="ico" aria-hidden="true"><use href="#i-arrow-right"/></svg></span>
+          </article>
+
+          <article class="service-card fade-up" data-service="websites" tabindex="0" role="button" aria-haspopup="dialog">
+            <div class="service-icon"><svg class="ico" aria-hidden="true"><use href="#i-browser"/></svg></div>
+            <h3>WordPress Development</h3>
+            <p>Business websites, custom themes, plugins, integrations and performance-focused builds.</p>
+            <span class="service-more mono">Learn more <svg class="ico" aria-hidden="true"><use href="#i-arrow-right"/></svg></span>
+          </article>
+
+          <article class="service-card fade-up" data-service="backend" tabindex="0" role="button" aria-haspopup="dialog">
+            <div class="service-icon"><svg class="ico" aria-hidden="true"><use href="#i-braces"/></svg></div>
+            <h3>API Development</h3>
+            <p>REST APIs, third-party integrations and backend services designed for reliable data flow.</p>
+            <span class="service-more mono">Learn more <svg class="ico" aria-hidden="true"><use href="#i-arrow-right"/></svg></span>
+          </article>
+
+          <article class="service-card fade-up" data-service="database" tabindex="0" role="button" aria-haspopup="dialog">
+            <div class="service-icon"><svg class="ico" aria-hidden="true"><use href="#i-database"/></svg></div>
+            <h3>Database Management</h3>
+            <p>Database design, implementation and maintenance for PostgreSQL, MySQL and MongoDB.</p>
+            <span class="service-more mono">Learn more <svg class="ico" aria-hidden="true"><use href="#i-arrow-right"/></svg></span>
+          </article>
+
+          <article class="service-card fade-up" data-service="writing" tabindex="0" role="button" aria-haspopup="dialog">
+            <div class="service-icon"><svg class="ico" aria-hidden="true"><use href="#i-pen"/></svg></div>
+            <h3>Technical Writing</h3>
+            <p>Blog posts, documentation and educational content on technology trends, written for the intended audience.</p>
+            <span class="service-more mono">Learn more <svg class="ico" aria-hidden="true"><use href="#i-arrow-right"/></svg></span>
+          </article>
+
+          <article class="service-card fade-up" data-service="deployment" tabindex="0" role="button" aria-haspopup="dialog">
+            <div class="service-icon"><svg class="ico" aria-hidden="true"><use href="#i-cloud"/></svg></div>
+            <h3>Deployment &amp; Support</h3>
+            <p>Server setup, domains and production deployment, plus bug fixes, updates and ongoing support.</p>
+            <span class="service-more mono">Learn more <svg class="ico" aria-hidden="true"><use href="#i-arrow-right"/></svg></span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- VIDEO POP-UP: web app demo cards (data-video="YouTube ID") play here -->
+    <dialog class="video-modal" id="videoModal" aria-labelledby="videoModalTitle">
+      <button type="button" class="modal-close" id="videoModalClose" aria-label="Close video">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+      <div class="video-frame" id="videoFrame"></div>
+      <div class="video-bar">
+        <div>
+          <span class="mono">Web application demo</span>
+          <h3 id="videoModalTitle"></h3>
+        </div>
+        <a class="video-yt" id="videoYtLink" href="#" target="_blank" rel="noopener noreferrer">
+          <svg class="ico" aria-hidden="true"><use href="#i-youtube"/></svg> Watch on YouTube
+        </a>
+      </div>
+    </dialog>
+
+    <!--
+      SERVICE POP-UP
+      Cards with data-service="x" open the <template id="service-x"> below.
+      Edit the text inside each template to update a pop-up.
+    -->
+    <dialog class="service-modal" id="serviceModal" aria-labelledby="serviceModalTitle">
+      <button type="button" class="modal-close" id="serviceModalClose" aria-label="Close">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" aria-hidden="true">
+          <path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </button>
+      <div class="modal-inner">
+        <div class="modal-icon"><svg class="ico" aria-hidden="true"><use href=""/></svg></div>
+        <div class="modal-kicker mono" id="serviceModalKicker">Service</div>
+        <h3 class="modal-title" id="serviceModalTitle"></h3>
+        <div id="serviceModalContent"></div>
+      </div>
+    </dialog>
+
+    <template id="service-about" data-icon="user" data-kicker="About me" data-title="Klaus Orioki">
+      <div class="modal-body">
+      <p class="modal-tagline">I build things that make sense.</p>
+      <p class="modal-lead">I&rsquo;m a software engineer who enjoys turning ideas, problems and messy requirements into clean, usable digital products.</p>
+      <p>My journey sits at the intersection of technology and business. I started with a degree in Business &amp; Information Technology, which gave me an appreciation for not just how technology works, but why it matters to the people and businesses using it. From there, I went deeper into software engineering through full-stack development at Moringa School and software engineering at ALX Africa.</p>
+      <p>Since then, I&rsquo;ve worked across everything from websites and WordPress builds to full-stack applications, APIs and business systems. I enjoy taking a problem from &ldquo;we need this&rdquo; to something people can actually use &mdash; thinking through the architecture, building the backend, shaping the interface, and making sure the final experience feels right.</p>
+      <p>I&rsquo;m particularly interested in building stylish, functional websites, scalable systems, APIs and service-oriented applications, and I&rsquo;m always looking for opportunities to work on larger, more challenging problems alongside good teams.</p>
+      <p>Outside of development, I&rsquo;ve also worked as a technical writer, turning complex ideas into content that is clear, useful and engaging.</p>
+      <p class="modal-closing">For me, good software isn&rsquo;t just about making something work. It&rsquo;s about building something that looks visually good, works well, makes sense, and creates real value.</p>
+      </div>
+      <div class="modal-actions"></div>
+    </template>
+    <template id="service-fullstack" data-icon="layers" data-title="Full-Stack Web Development">
+      <div class="modal-body">
+      <p>Primarily a web developer, I specialize in crafting dynamic and responsive full-stack web applications. Proficient in Python, JavaScript and CSS, I leverage frameworks such as Django and Flask to build robust and scalable backend solutions.</p>
+      <p>I also employ a combination of React, Tailwind CSS, HTML and JavaScript to develop clean, interactive user interfaces. From the frontend to the backend server logic, I diligently ensure a seamless integration of technologies, providing clients with feature-rich and modern web experiences.</p>
+      </div>
+      <div class="modal-actions"><button type="button" class="btn-main" data-goto-filter="web-apps">See web application projects <svg class="ico" aria-hidden="true"><use href="#i-arrow-right"/></svg></button></div>
+    </template>
+    <template id="service-websites" data-icon="browser" data-title="Website Development">
+      <div class="modal-body">
+      <p>I offer professional website development services with a strong focus on building clean, functional and visually appealing websites using WordPress (and on demand, other platforms such as Wix, Squarespace and custom static site setups).</p>
+      <p>Where projects demand more technical depth, I bring the ability to craft custom code, integrate webhooks and connect APIs seamlessly into websites to extend their functionality.</p>
+      <p>Working with Wingucreatives, I&rsquo;ve perfected the craft, designing websites that are not only user-friendly but also functional and aligned with each brand&rsquo;s unique identity.</p>
+      </div>
+      <div class="modal-actions"><button type="button" class="btn-main" data-goto-filter="websites">See website projects <svg class="ico" aria-hidden="true"><use href="#i-arrow-right"/></svg></button></div>
+    </template>
+    <template id="service-backend" data-icon="braces" data-title="Backend Software Engineering">
+      <div class="modal-body">
+      <p>With expertise in backend development, I offer services focused on creating powerful and efficient server-side architectures.</p>
+      <p>I&rsquo;m adept in REST APIs, specializing in designing and implementing backend systems that facilitate seamless communication between the frontend and the server.</p>
+      <p>My skills extend to database management across both SQL and NoSQL systems, including PostgreSQL, MySQL, SQLite and MongoDB, ensuring optimal data storage and retrieval.</p>
+      </div>
+      <div class="modal-actions"><a class="btn-main" href="https://github.com/niklauspeter/" target="_blank" rel="noopener noreferrer"><svg class="ico" aria-hidden="true"><use href="#i-github"/></svg> View my GitHub <svg class="ico" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a></div>
+    </template>
+    <template id="service-database" data-icon="database" data-title="Database Management">
+      <div class="modal-body">
+      <p>As part of my backend development expertise, I provide comprehensive database management services. Well versed in various database systems including PostgreSQL, MySQL, SQLite and MongoDB, I design and implement efficient data storage solutions.</p>
+      <p>Whether it&rsquo;s structuring data for optimal performance, ensuring data integrity and security, or querying databases for data retrieval, my database management services contribute to the overall reliability and scalability of web applications.</p>
+      </div>
+      <div class="modal-actions"></div>
+    </template>
+    <template id="service-deployment" data-icon="cloud" data-title="Deployment &amp; Support">
+      <div class="modal-body">
+      <p>Building a product is only half the job; getting it live and keeping it running smoothly is the other half. I handle the full path from development to production, whether it&rsquo;s a WordPress website, a custom web application or a simple static site.</p>
+      <p><strong>WordPress websites:</strong> I set up and migrate sites on shared, cPanel and managed WordPress hosting, and configure domains, DNS, SSL certificates and business email. I also tune caching and performance and put scheduled backups in place.</p>
+      <p><strong>Web applications:</strong> I deploy Django, Flask and React applications to cloud platforms such as AWS and to virtual private servers. That covers web and application server configuration, environment variables, production databases and static and media file handling.</p>
+      <p><strong>Other hosting:</strong> For static sites, landing pages and portfolios, I use lightweight options such as GitHub Pages, Netlify and Vercel, connected to custom domains and set up so updates go live automatically.</p>
+      <p>After launch, I stay on for ongoing support: bug fixes, core, plugin and dependency updates, security hardening, uptime and backup checks, and improvements as your needs grow. This keeps your site or application secure, fast and reliable long after go-live.</p>
+      </div>
+      <div class="modal-actions"></div>
+    </template>
+    <template id="service-writing" data-icon="pen" data-title="Technical Writing">
+      <div class="modal-body">
+      <p>As a skilled technical writer, I excel in researching and producing engaging content on trending topics. My work includes comprehensive exploration of technology trends, industry insights and innovative solutions.</p>
+      <p>Whether it&rsquo;s blog posts, documentation or educational materials, I deliver content that is not only informative but also tailored to captivate and resonate with the target audience.</p>
+      </div>
+      <div class="modal-actions"><a class="btn-main" href="https://medium.com/@oriokiklaus" target="_blank" rel="noopener noreferrer"><svg class="ico" aria-hidden="true"><use href="#i-medium"/></svg> Read my blog <svg class="ico" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a></div>
+    </template>
+
+    <!-- CONTACT -->
+    <section class="contact-section" id="contact">
+      <div class="container-wide">
+        <div class="contact-box">
+          <div class="fade-up">
+            <div class="section-kicker mono">04 — Get in touch</div>
+            <h2 class="contact-title">Let's build something great.</h2>
+            <p class="contact-copy">
+              Have a project in mind, need a website or want to improve an
+              existing system? Send a message and let's discuss it.
+            </p>
+
+            <div class="contact-details">
+              <a class="contact-detail" href="mailto:oriokiklaus@gmail.com">
+                <svg class="ico" aria-hidden="true"><use href="#i-mail"/></svg> oriokiklaus@gmail.com
+              </a>
+              <a class="contact-detail" href="tel:+254700206386">
+                <svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg> 0700 206 386
+              </a>
+              <div class="contact-detail">
+                <svg class="ico" aria-hidden="true"><use href="#i-pin"/></svg> Nairobi, Kenya
+              </div>
+              <a class="contact-detail" href="https://www.linkedin.com/in/peter-klaus-orioki-597b3418b/" target="_blank" rel="noopener noreferrer">
+                <svg class="ico" aria-hidden="true"><use href="#i-linkedin"/></svg> LinkedIn
+              </a>
+              <a class="contact-detail" href="https://github.com/niklauspeter/" target="_blank" rel="noopener">
+                <svg class="ico" aria-hidden="true"><use href="#i-github"/></svg> GitHub
+              </a>
+            </div>
+          </div>
+
+          <!--
+            Messages are delivered by FormSubmit (formsubmit.co) to the
+            address in the action URL. No backend needed on GitHub Pages.
+          -->
+          <form id="contactForm" class="fade-up" action="https://formsubmit.co/oriokiklaus@gmail.com" method="POST">
+            <!-- FormSubmit settings -->
+            <input type="hidden" name="_subject" value="New enquiry from your portfolio website">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_next" id="formNext" value="">
+            <!-- Spam trap: real visitors never see or fill this -->
+            <input type="text" name="_honey" class="form-honey" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+            <p class="form-success" id="formSuccess" role="status" hidden>
+              <svg class="ico" aria-hidden="true"><use href="#i-send"/></svg>
+              Thanks, your message has been sent. I'll get back to you soon.
+            </p>
+
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label class="visually-hidden" for="cf-name">Your name</label>
+                <input class="form-control" id="cf-name" name="name" type="text" placeholder="Your name" required>
+              </div>
+              <div class="col-md-6">
+                <label class="visually-hidden" for="cf-email">Your email</label>
+                <input class="form-control" id="cf-email" name="email" type="email" placeholder="Your email" required>
+              </div>
+              <div class="col-12">
+                <label class="visually-hidden" for="cf-subject">What can I help you with?</label>
+                <input class="form-control" id="cf-subject" name="subject" type="text" placeholder="What can I help you with?" required>
+              </div>
+              <div class="col-12">
+                <label class="visually-hidden" for="cf-message">Project details</label>
+                <textarea class="form-control" id="cf-message" name="message" placeholder="Tell me a little about the project..." required></textarea>
+              </div>
+              <div class="col-12">
+                <button class="btn-main border-0" type="submit" id="formSubmit">
+                  <span class="btn-label">Send Message</span> <svg class="ico" aria-hidden="true"><use href="#i-send"/></svg>
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Floating back-to-top (appears after the hero) -->
+  <button type="button" class="to-top" id="toTop" aria-label="Back to top">
+    <svg class="to-top-ring" viewBox="0 0 52 52" aria-hidden="true">
+      <circle class="track" cx="26" cy="26" r="22"/>
+      <circle class="bar" id="toTopBar" cx="26" cy="26" r="22"/>
+    </svg>
+    <svg class="ico" aria-hidden="true"><use href="#i-arrow-up"/></svg>
+  </button>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container-wide footer-inner">
+      <div>
+        <strong style="color:#dbe7e9">Klaus <span style="color:var(--accent)">Orioki.</span></strong>
+        <span> — Full-Stack Software Developer</span>
+      </div>
+
+      <div class="footer-social">
+        <a href="#home">Back to top <svg class="ico" aria-hidden="true"><use href="#i-arrow-up"/></svg></a>
+        <a href="#projects">Work</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <div>© <span id="year"></span> Klaus Orioki</div>
+    </div>
+  </footer>
+
   <script src="js/main.js"></script>
-
 </body>
-
 </html>
