@@ -40,7 +40,7 @@
   <noscript><style>.fade-up, .reveal-on-scroll { opacity: 1 !important; transform: none !important; }</style></noscript>
 
   <!-- Bump the ?v= value on these two links whenever you change the CSS or JS, so browsers fetch the new files -->
-  <link rel="stylesheet" href="css/styles.css?v=2026-09-30c">
+  <link rel="stylesheet" href="css/styles.css?v=2026-10-01">
 </head>
 
 <body>
@@ -87,7 +87,7 @@
       <ul class="nav-links" id="navLinks">
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
+        <li><a href="#projects" class="nav-feature">Projects</a></li>
         <li><a href="#services">Services</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
@@ -122,6 +122,7 @@
             </p>
 
             <p class="hero-copy">
+              <strong class="hero-tagline">You think it. I build it.</strong>
               From websites and applications to the systems behind them, I turn
               ideas and requirements into digital products that are clear,
               functional and thoughtfully built.
@@ -144,7 +145,7 @@
             </div>
 
             <div class="hero-actions">
-              <a class="btn-main" href="#projects">View My Work</a>
+              <a class="btn-main btn-projects" href="#projects">My Projects <svg class="ico" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
               <a class="hero-link" href="#contact"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 11.5a7.5 7.5 0 0 1-11.1 6.6L4 19.5l1.4-4.4A7.5 7.5 0 1 1 20 11.5z"/><path d="M8.5 11.5h.01M12 11.5h.01M15.5 11.5h.01" stroke-width="2.6"/></svg> Get In Touch</a>
             </div>
           </div>
@@ -745,17 +746,17 @@
         </div>
 
         <div class="services-grid">
+          <article class="service-card fade-up" data-service="websites" tabindex="0" role="button" aria-haspopup="dialog">
+            <div class="service-icon"><svg class="ico" aria-hidden="true"><use href="#i-browser"/></svg></div>
+            <h3>Website Development</h3>
+            <p>Business websites, custom themes, plugins, integrations and performance-focused builds.</p>
+            <span class="service-more mono">Learn more <svg class="ico" aria-hidden="true"><use href="#i-arrow-right"/></svg></span>
+          </article>
+
           <article class="service-card fade-up" data-service="fullstack" tabindex="0" role="button" aria-haspopup="dialog">
             <div class="service-icon"><svg class="ico" aria-hidden="true"><use href="#i-layers"/></svg></div>
             <h3>Full-Stack Development</h3>
             <p>Custom web applications using Python, Django, React and modern web technologies.</p>
-            <span class="service-more mono">Learn more <svg class="ico" aria-hidden="true"><use href="#i-arrow-right"/></svg></span>
-          </article>
-
-          <article class="service-card fade-up" data-service="websites" tabindex="0" role="button" aria-haspopup="dialog">
-            <div class="service-icon"><svg class="ico" aria-hidden="true"><use href="#i-browser"/></svg></div>
-            <h3>WordPress Development</h3>
-            <p>Business websites, custom themes, plugins, integrations and performance-focused builds.</p>
             <span class="service-more mono">Learn more <svg class="ico" aria-hidden="true"><use href="#i-arrow-right"/></svg></span>
           </article>
 
@@ -830,10 +831,10 @@
     <template id="service-about" data-icon="user" data-kicker="About me" data-title="Klaus Orioki">
       <div class="modal-body">
       <p class="modal-tagline">I build things that make sense.</p>
-      <p class="modal-lead">I&rsquo;m a software engineer who enjoys turning ideas, problems and messy requirements into clean, usable digital products.</p>
+      <p class="modal-lead">A software engineer who enjoys turning ideas, problems and messy requirements into clean, usable digital products.</p>
       <p>My journey sits at the intersection of technology and business. I started with a degree in Business &amp; Information Technology, which gave me an appreciation for not just how technology works, but why it matters to the people and businesses using it. From there, I went deeper into software engineering through full-stack development at Moringa School and software engineering at ALX Africa.</p>
       <p>Since then, I&rsquo;ve worked across everything from websites and WordPress builds to full-stack applications, APIs and business systems. I enjoy taking a problem from &ldquo;we need this&rdquo; to something people can actually use &mdash; thinking through the architecture, building the backend, shaping the interface, and making sure the final experience feels right.</p>
-      <p>I&rsquo;m particularly interested in building stylish, functional websites, scalable systems, APIs and service-oriented applications, and I&rsquo;m always looking for opportunities to work on larger, more challenging problems alongside good teams.</p>
+      <p>I&rsquo;m particularly interested in building stylish, functional websites, scalable systems, APIs and service-oriented applications. I also enjoy the creative side of bringing products to market&mdash;shaping their visual identity, strengthening their brand presence, and helping present them in a way that connects with the right audience. I&rsquo;m always looking for opportunities to work on larger, more challenging problems and build meaningful products alongside good teams.</p>
       <p>Outside of development, I&rsquo;ve also worked as a technical writer, turning complex ideas into content that is clear, useful and engaging.</p>
       <p class="modal-closing">For me, good software isn&rsquo;t just about making something work. It&rsquo;s about building something that looks visually good, works well, makes sense, and creates real value.</p>
       </div>
@@ -848,9 +849,10 @@
     </template>
     <template id="service-websites" data-icon="browser" data-title="Website Development">
       <div class="modal-body">
-      <p>I offer professional website development services with a strong focus on building clean, functional and visually appealing websites using WordPress (and on demand, other platforms such as Wix, Squarespace and custom static site setups).</p>
-      <p>Where projects demand more technical depth, I bring the ability to craft custom code, integrate webhooks and connect APIs seamlessly into websites to extend their functionality.</p>
-      <p>Working with Wingucreatives, I&rsquo;ve perfected the craft, designing websites that are not only user-friendly but also functional and aligned with each brand&rsquo;s unique identity.</p>
+      <p>I offer professional website development services with a strong focus on building clean, functional and visually appealing websites using WordPress (and, on demand, other platforms such as Wix, Squarespace and custom static site setups).</p>
+      <p>I place strong emphasis on branding and visual identity throughout the development process. A website should feel like a natural extension of a brand. It should seamlessly communicate its personality, values and positioning consistently through its design, typography, colour, imagery and overall user experience.</p>
+      <p>Where projects demand more technical depth, I bring the ability to craft custom code, integrate webhooks and connect APIs to extend what a website can do. This can include payment integrations, fetching and displaying data from external services, connecting third-party platforms, automating workflows, and building custom functionality around a site&rsquo;s specific requirements.</p>
+      <p>Working with my partners at Wingucreatives, I&rsquo;ve refined the craft of designing and developing websites that are not only user-friendly and functional, but also thoughtfully branded and aligned with each client&rsquo;s unique identity.</p>
       </div>
       <div class="modal-actions"><button type="button" class="btn-main" data-goto-filter="websites">See website projects <svg class="ico" aria-hidden="true"><use href="#i-arrow-right"/></svg></button></div>
     </template>
@@ -991,6 +993,6 @@
     </div>
   </footer>
 
-  <script src="js/main.js?v=2026-09-30c"></script>
+  <script src="js/main.js?v=2026-10-01"></script>
 </body>
 </html>
